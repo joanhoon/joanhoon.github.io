@@ -92,7 +92,11 @@ $(document).ready(function () {
       $(document)
         .on('sidebar.isShowing', function () {
           NexT.utils.isDesktop() && $('body').velocity('stop').velocity(
-            {paddingRight: SIDEBAR_WIDTH},
+            {paddingLeft: SIDEBAR_WIDTH},
+            SIDEBAR_DISPLAY_DURATION
+          );
+          NexT.utils.isDesktop() && $('.sidebar-toggle').velocity('stop').velocity(
+            {left: '270px'},
             SIDEBAR_DISPLAY_DURATION
           );
         })
@@ -147,7 +151,8 @@ $(document).ready(function () {
       this.sidebarEl.trigger('sidebar.isShowing');
     },
     hideSidebar: function () {
-      NexT.utils.isDesktop() && $('body').velocity('stop').velocity({paddingRight: 0});
+      NexT.utils.isDesktop() && $('body').velocity('stop').velocity({paddingLeft: 0});
+      NexT.utils.isDesktop() && $('.sidebar-toggle').velocity('stop').velocity({left: '30px'});
       this.sidebarEl.find('.motion-element').velocity('stop').css('display', 'none');
       this.sidebarEl.velocity('stop').velocity({width: 0}, {display: 'none'});
 
