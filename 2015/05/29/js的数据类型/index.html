@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="相等 ==只判断值是否相同 全等 ===先判断类型是否一致，然后再判断值是否相等 123var obj = &amp;#123;&amp;#125;;var obj1 = &amp;#123;&amp;#125;;obj == obj1;  对象类型的数据进行对比，是比较的存储地址  1234console.log(&amp;#123;&amp;#125; == &amp;#123;&amp;#125;);  //falseconsole.log(1 ===">
+<meta name="description" content="基本类型123string    var str = &quot;abc&quot;;number    var num = 1;boolean   var flag = true; 复合类型 复杂类型12345678910Object   var obj = new Object();function Array    var arr = new Array();Date     var now = new Dat">
 <meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="全等和等于的区别">
-<meta property="og:url" content="http://yoursite.com/2017/05/29/全等和等于的区别/index.html">
+<meta property="og:title" content="js的数据类型">
+<meta property="og:url" content="http://yoursite.com/2015/05/29/js的数据类型/index.html">
 <meta property="og:site_name" content="JoanHoon">
-<meta property="og:description" content="相等 ==只判断值是否相同 全等 ===先判断类型是否一致，然后再判断值是否相等 123var obj = &amp;#123;&amp;#125;;var obj1 = &amp;#123;&amp;#125;;obj == obj1;  对象类型的数据进行对比，是比较的存储地址  1234console.log(&amp;#123;&amp;#125; == &amp;#123;&amp;#125;);  //falseconsole.log(1 ===">
-<meta property="og:updated_time" content="2017-06-27T11:45:53.300Z">
+<meta property="og:description" content="基本类型123string    var str = &quot;abc&quot;;number    var num = 1;boolean   var flag = true; 复合类型 复杂类型12345678910Object   var obj = new Object();function Array    var arr = new Array();Date     var now = new Dat">
+<meta property="og:updated_time" content="2017-06-27T13:15:26.692Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="全等和等于的区别">
-<meta name="twitter:description" content="相等 ==只判断值是否相同 全等 ===先判断类型是否一致，然后再判断值是否相等 123var obj = &amp;#123;&amp;#125;;var obj1 = &amp;#123;&amp;#125;;obj == obj1;  对象类型的数据进行对比，是比较的存储地址  1234console.log(&amp;#123;&amp;#125; == &amp;#123;&amp;#125;);  //falseconsole.log(1 ===">
+<meta name="twitter:title" content="js的数据类型">
+<meta name="twitter:description" content="基本类型123string    var str = &quot;abc&quot;;number    var num = 1;boolean   var flag = true; 复合类型 复杂类型12345678910Object   var obj = new Object();function Array    var arr = new Array();Date     var now = new Dat">
 
 
 
@@ -131,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/29/全等和等于的区别/"/>
+  <link rel="canonical" href="http://yoursite.com/2015/05/29/js的数据类型/"/>
 
 
 
 
 
-  <title>全等和等于的区别 | JoanHoon</title>
+  <title>js的数据类型 | JoanHoon</title>
   
 
 
@@ -249,9 +249,47 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -276,7 +314,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/29/全等和等于的区别/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/05/29/js的数据类型/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Joan Hoon">
@@ -293,7 +331,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">全等和等于的区别</h2>
+          <h2 class="post-title" itemprop="name headline">js的数据类型</h2>
         
 
         <div class="post-meta">
@@ -305,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-29T00:00:00+08:00">
-                2017-05-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-05-29T00:00:00+08:00">
+                2015-05-29
               </time>
             
 
@@ -373,25 +411,12 @@
       
 
       
-        <h2 id="相等"><a href="#相等" class="headerlink" title="相等 =="></a>相等 ==</h2><pre><code>只判断值是否相同
-</code></pre><h2 id="全等"><a href="#全等" class="headerlink" title="全等 ==="></a>全等 ===</h2><pre><code>先判断类型是否一致，然后再判断值是否相等
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line"><span class="keyword">var</span> obj1 = &#123;&#125;;</div><div class="line">obj == obj1;</div></pre></td></tr></table></figure>
-
-对象类型的数据进行对比，是比较的存储地址
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(&#123;&#125; == &#123;&#125;);  <span class="comment">//false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="number">1</span> === <span class="string">"1"</span>);  <span class="comment">//false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="literal">NaN</span> == <span class="literal">NaN</span>);  <span class="comment">//false</span></div><div class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> === <span class="literal">undefined</span>);  <span class="comment">//false</span></div></pre></td></tr></table></figure>
-</code></pre><p>##当一个值类型的数据和引用类型的数据发生运算的时候 (+ - * / ==)<br>    会遵守如下的规则：</p>
-<pre><code>1. 先调用这个引用类型数据的valueOf方法，获取返回值之后参与运算，如果能运算，那么直接得出结果
-2. 如果不能运算, 继续调用该引用类型数据的toString方法，获取返回值参与运算，这个肯定是可以的出来结果的！
-
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log([] == ![]);</div><div class="line"></div><div class="line"><span class="comment">//console.log([] == false);</span></div><div class="line"><span class="comment">//console.log([].valueOf() == false);</span></div><div class="line"><span class="comment">//[].valueOf()返回值为数组本身，所以不能参与运算</span></div><div class="line"><span class="comment">//console.log([].toString() == false);</span></div><div class="line"><span class="comment">//console.log("" == false);</span></div><div class="line"><span class="comment">//结果就是true</span></div></pre></td></tr></table></figure>
-
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(&#123;&#125; == !&#123;&#125;);</div><div class="line"></div><div class="line"><span class="comment">//console.log(&#123;&#125; == false);</span></div><div class="line"><span class="comment">//console.log(&#123;&#125;.valueOf() == false);</span></div><div class="line"><span class="comment">//console.log(&#123;&#125;.toString() == false);</span></div><div class="line"><span class="comment">//console.log("[object Object]" == false);</span></div><div class="line"><span class="comment">//结果就是false</span></div></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">	<span class="attr">valueOf</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="number">123</span>;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(obj + <span class="number">1</span>); <span class="comment">//124</span></div></pre></td></tr></table></figure>
-</code></pre>
+        <h2 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">string    <span class="keyword">var</span> str = <span class="string">"abc"</span>;</div><div class="line">number    <span class="keyword">var</span> num = <span class="number">1</span>;</div><div class="line">boolean   <span class="keyword">var</span> flag = <span class="literal">true</span>;</div></pre></td></tr></table></figure>
+<h2 id="复合类型-复杂类型"><a href="#复合类型-复杂类型" class="headerlink" title="复合类型 复杂类型"></a>复合类型 复杂类型</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>   <span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line"><span class="function"><span class="keyword">function</span> </span></div><div class="line"></div><div class="line"><span class="title">Array</span>    <span class="title">var</span> <span class="title">arr</span> = <span class="title">new</span> <span class="title">Array</span>(<span class="params"></span>);</div><div class="line"><span class="title">Date</span>     <span class="title">var</span> <span class="title">now</span> = <span class="title">new</span> <span class="title">Date</span>(<span class="params"></span>);</div><div class="line"><span class="title">RegExp</span>   <span class="title">var</span> <span class="title">reg</span> = <span class="title">new</span> <span class="title">RegExp</span>(<span class="params"></span>);</div><div class="line"><span class="title">Math</span>   </div><div class="line"><span class="title">String</span>   <span class="title">var</span> <span class="title">str</span> = <span class="title">new</span> <span class="title">String</span>(<span class="params"></span>);</div><div class="line"><span class="title">Number</span>   <span class="title">var</span> <span class="title">num</span> = <span class="title">new</span> <span class="title">Number</span>(<span class="params"></span>);</div><div class="line"><span class="title">Boolean</span>  <span class="title">var</span> <span class="title">bl</span> = <span class="title">new</span> <span class="title">Boolean</span>(<span class="params"></span>);</div></pre></td></tr></table></figure>
+<h2 id="空类型"><a href="#空类型" class="headerlink" title="空类型"></a>空类型</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="literal">null</span></div><div class="line"><span class="literal">undefined</span></div></pre></td></tr></table></figure>
+<h2 id="如何获取数据类型"><a href="#如何获取数据类型" class="headerlink" title="如何获取数据类型"></a>如何获取数据类型</h2><pre><code>typeof  数据
+</code></pre><p>typeof关键字的返回值是字符串类型的一个字符串，表示数据的类型！<br><code>typeof null</code>       返回的是 object  但是不代表这个null是一个复杂类型的数据<br><code>typoef undefined</code>  返回的是 undefined</p>
+<h2 id="获取object后面的数据类型"><a href="#获取object后面的数据类型" class="headerlink" title="获取object后面的数据类型"></a>获取object后面的数据类型</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getType</span>(<span class="params">obj</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(obj).slice(<span class="number">8</span>, <span class="number">-1</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [];</div><div class="line"><span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line"><span class="keyword">var</span> reg = <span class="regexp">/\d/</span>;</div><div class="line"><span class="built_in">console</span>.log(getType(arr));  <span class="comment">//Array</span></div><div class="line"><span class="built_in">console</span>.log(getType(now));  <span class="comment">//Date</span></div><div class="line"><span class="built_in">console</span>.log(getType(reg));  <span class="comment">//RegExp</span></div></pre></td></tr></table></figure>
       
     </div>
 
@@ -443,8 +468,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/25/hexo博客更换主题/" rel="prev" title="hexo博客更换主题">
-                hexo博客更换主题 <i class="fa fa-chevron-right"></i>
+              <a href="/2015/05/29/全等和等于的区别/" rel="prev" title="全等和等于的区别">
+                全等和等于的区别 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -517,7 +542,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -574,7 +599,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#相等"><span class="nav-number">1.</span> <span class="nav-text">相等 ==</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全等"><span class="nav-number">2.</span> <span class="nav-text">全等 ===</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本类型"><span class="nav-number">1.</span> <span class="nav-text">基本类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复合类型-复杂类型"><span class="nav-number">2.</span> <span class="nav-text">复合类型 复杂类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#空类型"><span class="nav-number">3.</span> <span class="nav-text">空类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何获取数据类型"><span class="nav-number">4.</span> <span class="nav-text">如何获取数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取object后面的数据类型"><span class="nav-number">5.</span> <span class="nav-text">获取object后面的数据类型</span></a></li></ol></div>
             
 
           </div>
@@ -743,6 +768,19 @@
   
 
 
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.1"></script>
 
 
 
