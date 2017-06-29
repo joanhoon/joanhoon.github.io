@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="JoanHoon">
 <meta property="og:description" content="第一步：选择主题主题从哪里找呢？官方就有提供了一些 主题，可以从中选择。官方提供的主题不少，可是并不一定有自己喜欢的或者又很难选择，这是个头疼的问题。之前我的博客主题就是随便选了一个还算看的过去的。但是再使用的过程中发现了一些问题：  不会自动生成目录不能自动获取摘要有很多配置不太方便  虽然有些问题，但并不影响整体使用，所以也没想去换主题了。前端时间逛知乎，发现这样一个问题：有哪些好看的 Hex">
 <meta property="og:image" content="http://yoursite.com/2017/06/25/hexo/hexo博客更换主题/download.png">
-<meta property="og:updated_time" content="2017-06-25T08:33:57.280Z">
+<meta property="og:updated_time" content="2017-06-29T12:51:55.018Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo博客更换主题">
 <meta name="twitter:description" content="第一步：选择主题主题从哪里找呢？官方就有提供了一些 主题，可以从中选择。官方提供的主题不少，可是并不一定有自己喜欢的或者又很难选择，这是个头疼的问题。之前我的博客主题就是随便选了一个还算看的过去的。但是再使用的过程中发现了一些问题：  不会自动生成目录不能自动获取摘要有很多配置不太方便  虽然有些问题，但并不影响整体使用，所以也没想去换主题了。前端时间逛知乎，发现这样一个问题：有哪些好看的 Hex">
@@ -399,7 +399,7 @@
 <h3 id="验证主题是否启用"><a href="#验证主题是否启用" class="headerlink" title="验证主题是否启用"></a>验证主题是否启用</h3><p>运行 hexo s –debug，并访问 <a href="http://localhost:4000，确保站点正确运行。" target="_blank" rel="external">http://localhost:4000，确保站点正确运行。</a></p>
 <h2 id="第三步：配置"><a href="#第三步：配置" class="headerlink" title="第三步：配置"></a>第三步：配置</h2><h3 id="选择-Scheme"><a href="#选择-Scheme" class="headerlink" title="选择 Scheme"></a>选择 Scheme</h3><p>NexT 通过 Scheme 提供主题中的主题。 Mist 是 NexT 的第一款 Scheme。启用 Mist 仅需在 主题配置文件 中将 #scheme: Mist 前面的 # 注释去掉即可。</p>
 <h3 id="语言设置"><a href="#语言设置" class="headerlink" title="语言设置"></a>语言设置</h3><p>编辑 站点配置文件，将 language 设置成你所需要的语言。<br>例如选用正体中文，则配置为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1  language: zh-Hans</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">language: zh-Hans</div></pre></td></tr></table></figure>
 <p>可用的语言如以下表格所示：</p>
 <table>
 <thead>
@@ -444,14 +444,14 @@
 </table>
 <h3 id="菜单设置"><a href="#菜单设置" class="headerlink" title="菜单设置"></a>菜单设置</h3><p>菜单配置在 主题配置文件的 menu。 若你的站点运行在子目录中，请将链接前缀的 / 去掉。默认支持的菜单项有：</p>
 <p>键值    设定值    comment<br>home    home: /    主页<br>archives    archives: /archives    归档页<br>categories    categories: /categories    分类页（需手动创建）<br>tags    tags: /tags    标签页（需手动创建）<br>about    about: /about    关于页面 （需手动创建）<br>commonweal    commonweal: /404.html    公益 404 （需手动创建）</p>
-<h3 id="菜单示例配置："><a href="#菜单示例配置：" class="headerlink" title="菜单示例配置："></a>菜单示例配置：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">1 menu:</div><div class="line">2   home: /</div><div class="line">3   archives: /archives</div><div class="line">4   #about: /about</div><div class="line">5   #categories: /categories</div><div class="line">6   tags: /tags</div><div class="line">7   #commonweal: /404.html</div></pre></td></tr></table></figure>
+<h3 id="菜单示例配置："><a href="#菜单示例配置：" class="headerlink" title="菜单示例配置："></a>菜单示例配置：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home: /</div><div class="line">  archives: /archives</div><div class="line">  #about: /about</div><div class="line">  #categories: /categories</div><div class="line">  tags: /tags</div><div class="line">  #commonweal: /404.html</div></pre></td></tr></table></figure>
 <h3 id="侧栏设置"><a href="#侧栏设置" class="headerlink" title="侧栏设置"></a>侧栏设置</h3><p>默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示。可以通过修改 主题配置文件 中的 sidebar 字段来控制侧栏的行为。</p>
 <p>支持的选项有：</p>
 <pre><code>post - 默认行为，在文章页面（拥有目录列表）时显示
 always - 在所有页面中都显示
 hide - 在所有页面中都隐藏（可以手动展开）
 </code></pre><p>侧栏示例配置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1 sidebar: post</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sidebar: post</div></pre></td></tr></table></figure>
 <h3 id="头像设置"><a href="#头像设置" class="headerlink" title="头像设置"></a>头像设置</h3><p>编辑 站点配置文件，新增字段 avatar， 值设置成头像的链接地址。</p>
 <p>其中，头像的链接地址可以是：</p>
 <table>
@@ -477,7 +477,7 @@ hide - 在所有页面中都隐藏（可以手动展开）
 </tbody>
 </table>
 <p>头像设置示例：</p>
-<p>1<br>avatar: <a href="https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460" target="_blank" rel="external">https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460</a></p>
+<p>avatar: <a href="https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460" target="_blank" rel="external">https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460</a></p>
 <h3 id="作者名称"><a href="#作者名称" class="headerlink" title="作者名称"></a>作者名称</h3><p>编辑 站点配置文件，设置 author 为你的昵称。</p>
 <h3 id="站点描述设置"><a href="#站点描述设置" class="headerlink" title="站点描述设置"></a>站点描述设置</h3><p>编辑 站点配置文件，设置 description 字段为你的站点描述。站点描述可以是你喜欢的一句签名:)</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>到这里整个主题更换和配置就已经完成，现在可以看到博客已经成为预期的样子了。<br>如果更换其它的主题，也大同小异，都是这三步，只是涉及到具体的配置就有些区别而已。</p>
