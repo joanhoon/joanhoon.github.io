@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[批量修改文件后缀名]]></title>
+    <url>%2F2017%2F06%2F30%2Fbat%E6%93%8D%E4%BD%9C%2F%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D%2F</url>
+    <content type="text"><![CDATA[无需软件批量修改文件后缀名？怎么通过命令行批量修改文件后缀名? 有时候由于文件后缀名格式不同，有的时候我们需要对文件扩展名进行修改，或者文件扩展名丢失，需要添加。如果数量少的文件那还简单直接修改就好了。如果很多怎么办呢？下面小编告诉您一个不需要安装软件也能操作的办法 一. 查看\显示文件扩展名 既然要修改文件的后缀名，那么我们首先应该查看一下文件的扩展名。（已经知道的直接看后面批量修改的部分） 直接选择文件属性，即可查看文件的类型。 如果要直接显示文件后缀名，可以按照下面操作如下图。下面以win10为例，打开任意文件夹==&gt;查看==&gt;”文件扩展名” 打上勾下面以Xp为例，找到开始==&gt;控制面板==&gt;文件夹选项==&gt;点击查看==&gt;找到把”隐藏已知文件夹类型的扩展名”前面那个钩去掉然后应用 二. 修改文件后缀名\扩展名（手动修改） 已经能正常查看到文件后缀名了，如果要修改文件后缀名，扩展名很简单直接选择文件，右键重命名。或者按住键盘“F2”键，进行修改。 这是针对当个文件的操作方法，批量修改看后面 三. 批量修改文件扩展名 把需要修改扩展名的文件都拷贝放到一个文件夹里面，如下图只是修改特定的后缀名文件。（GIF —- JPG）如下图：我只想修改文件后缀名的是GIF的文件改成JPG操作步骤: 在当前这个文件夹下面，新建一个记事本文件。如下图 打开新建的记事本文件在里面输入 ren .gif .jpg 下面内容，如下图输入格式ren 空格 星号 点 需要修改的文件后缀名 空格星号 点需要改成的文件后缀名 如下图。(注意：在*之前有一个英文的空格) 设置好之后，保存文件。同时吧这个文件改成 .bat后缀名的文件（这个非常重要）如下图。改成 批量修改文件后缀名.bat 设置好之后，点击运行刚刚那个BAT文件就好了。注意看现在是gif文件格式 双击刚刚那个文件，看到没有，文件全部变成Jpg后缀名字了，怎么样是不是很简单？ 四. 批量修改不同的文件扩展名\后缀名 如果我整个文件夹下面的所有类型的文件都要修改怎么办呢？如下图 什么类型的文件都有呢 其实也很简单，只需要修改一个参数就好了。如下图 找到刚刚那个bat文件，右键编辑 – 或者用记事本打开。( 注意：在*之前有一个英文的空格 ) 把命令改成， ren . *.gif 格式 ren 空格 星点 星 空格 星 点 文件后缀名 再次运行，你会发现文件夹下面的所有文件都变成 gif文件啦。是不是很简单 五. 如何批量修改不同路径的文件扩展名\后缀名 比如你要修改 C:\Documents andSettings\Administrator\桌面\批量修改文件后缀名 这个文件夹内的文件，你可以在任意 文件夹上新建一个 bat文件。输入下面内容 就是刚刚那个2种情况，前面添加一个 cd 空格 后面是文件夹的路径啦这个路径怎么获取？ 打开的文件夹上面地址栏上就有啦你如果要修改以后只需要在那个文件里面，编辑修改cd 后面的那一串路径就好了，怎么样是不是很简单？ 六. 注意事项 bat格式文件，是windows批处理文件。 以上提供的批量修改文件后缀名只对修改有作用，文件每个后缀名代表的文件类型不同，如果不同类型文件直接修改后缀名可能会导致文件打不开或者不兼容的问题。]]></content>
+      <categories>
+        <category>bat</category>
+      </categories>
+      <tags>
+        <tag>bat</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[搭建 hexo，在执行 hexo deploy 后,出现 error deployer not found:github 的错误]]></title>
+    <url>%2F2017%2F06%2F26%2Fhexo%2F%E6%90%AD%E5%BB%BA-hexo%EF%BC%8C%E5%9C%A8%E6%89%A7%E8%A1%8C-hexo-deploy-%E5%90%8E-%E5%87%BA%E7%8E%B0-error-deployer-not-found-github-%E7%9A%84%E9%94%99%E8%AF%AF%2F</url>
+    <content type="text"><![CDATA[当 hexo g -d 出现error deployer not found:github 的错误一、站点配置文件 _config.yml文件，deploy的type 的github需要改成git 二、pm install hexo-deployer-git –save 之后，然后再部署试试]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo博客更换主题]]></title>
+    <url>%2F2017%2F06%2F25%2Fhexo%2Fhexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[第一步：选择主题主题从哪里找呢？官方就有提供了一些 主题，可以从中选择。官方提供的主题不少，可是并不一定有自己喜欢的或者又很难选择，这是个头疼的问题。之前我的博客主题就是随便选了一个还算看的过去的。但是再使用的过程中发现了一些问题： 不会自动生成目录不能自动获取摘要有很多配置不太方便 虽然有些问题，但并不影响整体使用，所以也没想去换主题了。前端时间逛知乎，发现这样一个问题：有哪些好看的 Hexo 主题？查看第一名的答案，有个主题排行，发现排第一名的主题 next。然后点开主题看了一下，发现主题简约，配置详细，能够解决我之前存在的问题，于是就决定选择这个主题了。 第二步：安装主题Hexo 有两份主要的配置文件（_config.yml），一份位于站点根目录下，另一份位于主题目录下。为了描述方便，在以下说明中，将前者称为 站点配置文件，后者称为 主题配置文件。 Hexo 安装主题的方式非常简单，只需要将主题文件放置于站点目录的 themes 目录下，然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。 下载 NexT 主题下载NexT主题稳定版： 前往 NexT 版本 发布页面 选择你所需要的版本，点击 Download ZIP 下载 Source Code (zip) 到本地。 或者 在 git bash 执行 git clone git@github.com:iissnan/hexo-theme-next.git 解压所下载的压缩包至站点的 themes 目录下，并将 解压后的文件夹名称更改为 next 启用NexT主题克隆/下载 完成后，打开 站点配置文件，找到 theme 字段，并将其值更改为 next。 验证主题是否启用运行 hexo s –debug，并访问 http://localhost:4000，确保站点正确运行。 第三步：配置选择 SchemeNexT 通过 Scheme 提供主题中的主题。 Mist 是 NexT 的第一款 Scheme。启用 Mist 仅需在 主题配置文件 中将 #scheme: Mist 前面的 # 注释去掉即可。 语言设置编辑 站点配置文件，将 language 设置成你所需要的语言。例如选用正体中文，则配置为： 1language: zh-Hans 可用的语言如以下表格所示： 语言 代码 设定值 English en language: en 简体中文 zh-Hans language: zh-Hans French fr-FR language: fr-FR 正体中文 zh-hk/zh-tw language: zh-hk Russian ru language: ru German de language: de 菜单设置菜单配置在 主题配置文件的 menu。 若你的站点运行在子目录中，请将链接前缀的 / 去掉。默认支持的菜单项有： 键值 设定值 commenthome home: / 主页archives archives: /archives 归档页categories categories: /categories 分类页（需手动创建）tags tags: /tags 标签页（需手动创建）about about: /about 关于页面 （需手动创建）commonweal commonweal: /404.html 公益 404 （需手动创建） 菜单示例配置：1234567menu: home: / archives: /archives #about: /about #categories: /categories tags: /tags #commonweal: /404.html 侧栏设置默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示。可以通过修改 主题配置文件 中的 sidebar 字段来控制侧栏的行为。 支持的选项有： post - 默认行为，在文章页面（拥有目录列表）时显示 always - 在所有页面中都显示 hide - 在所有页面中都隐藏（可以手动展开） 侧栏示例配置： 1sidebar: post 头像设置编辑 站点配置文件，新增字段 avatar， 值设置成头像的链接地址。 其中，头像的链接地址可以是： 地址 值 完整的互联网 URL https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460 站点内的地址 /uploads/avatar.jpg - 需要将你的头像图片放置在 站点的 source/uploads/（可能需要新建uploads目录） /images/avatar.jpg - 需要将你的头像图片放置在 主题的 source/images/ 目录下 头像设置示例： avatar: https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460 作者名称编辑 站点配置文件，设置 author 为你的昵称。 站点描述设置编辑 站点配置文件，设置 description 字段为你的站点描述。站点描述可以是你喜欢的一句签名:) 总结到这里整个主题更换和配置就已经完成，现在可以看到博客已经成为预期的样子了。如果更换其它的主题，也大同小异，都是这三步，只是涉及到具体的配置就有些区别而已。 更多的配置可以参考下面的链接： NexT使用文档https://hexo.io/zh-cn/docs/configuration.html最后附上NexT下载地址：https://github.com/iissnan/hexo-theme-next]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[具名模块和匿名模块]]></title>
+    <url>%2F2015%2F06%2F29%2F%E6%A8%A1%E5%9D%97%E5%8C%96%2F%E5%85%B7%E5%90%8D%E6%A8%A1%E5%9D%97%E5%92%8C%E5%8C%BF%E5%90%8D%E6%A8%A1%E5%9D%97%2F</url>
+    <content type="text"><![CDATA[匿名模块123define([], function()&#123; &#125;) 具名模块123define("a", [], function()&#123; &#125;) 模块在声明的时候，给define传递个第一个参数可以是该模块的名称 在config中做配置的时候，别名尽量和具名模块的声明中的模块名称保持一致！可以保证不出错！！！]]></content>
+      <categories>
+        <category>模块化</category>
+        <category>js</category>
+        <category>bxg-day05</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[模块化]]></title>
+    <url>%2F2015%2F06%2F29%2F%E6%A8%A1%E5%9D%97%E5%8C%96%2F%E6%A8%A1%E5%9D%97%E5%8C%96%2F</url>
+    <content type="text"><![CDATA[简单的使用js文件作为模块的缺陷 全局变量污染 引用js文件的时候，次序非常重要，而且比较麻烦 模块化的优势 可以将公共的部分定义成模块，方便复用 解决全局变量污染的问题 模块之间的依赖关系，非常明确，而且在应用模块的时候，根本不需要考虑依赖的先后顺序问题。 前端模块化模块化的标准 CommonJS: 是一个模块化的标准。Node.js在使用的一个模块化的标准 AMD: Async Module Definition, 在CommonJS基础上衍生出来的适用于前端开发中的模块化标准 AMD. 尽早将所有的模块全部加载进来 require.js CMD: Common Module Definition在CommonJS基础上衍生出来的适用于前端开发中的模块化标准 CMD. 用到之的时候再加载， as lazy as possible sea.js AMD没有明显的BUG，CMD明显没有BUG 模块化的是实现（require.js）require.js 只是一个js文件，这个js文件可以帮助我们实现前端模块化，他遵循的标准就是AMD标准。 定义模块1234define(function()&#123; //模块中所有的内容 console.log("Hello, 我是一个模块");&#125;) 引用模块123require(["模块的名称"], function()&#123; &#125;) 注意事项如果模块只是执行一些代码实现指定的功能，那么直接引用该模块，功能即可实现。但是如果模块的存在是为了给我们提供一些方法，对象，其他的内容让我们使用的话，就需要给这个模块一个产出，使用return语句将要提供给别人使用的内容进行返回，使用该模块的使用，需要在require的第二个参数的函数中书写一个形参来接收这个内容，就能达到使用的效果了！ 模块依赖项的处理如果定义一个模块的时候，这个模块要依赖于其他模块来实现，那么我们需要给这个模块指定依赖项 define([“依赖项1”,”依赖项2”…”依赖项N”], function(){ //模块的功能代码}) 如果模块的依赖项有给模块提供内容使用，那么需要在当前模块的回调函数中添加形参来接收依赖项模块的返回值，这里的形参和依赖项是一一对应的，如果存在好多依赖项，有的依赖项有产出，有的没有，那我们一般会将所有有产出的依赖项放在前面，没有的放在后面，这样可以省略掉没有产出模块的形参 requirejs的入口文件设置data-main可以给请求requirejs的script标签设置一个data-main属性，这个属性中放的是一个文件的路径，在requirejs加载完毕之后，会自动去执行data-main这个路径中指向的文件中的js代码！ data-main中的内容是异步加载的，如果下面有要基于data-main的功能实现的内容，那么requirejs不能保证data-main是在下面的内容之前执行的 模块路径查找的问题 如果直接在html文件中书写script标签，在标签内使用require来加载某个模块，那么会以当前的这个html文件作为参照，去找相对路径 如果我们是在入口文件中使用require加载的模块，那么这个时候是参照data-main指定的这个入口文件所在的目录来找模块的路径的！ 如果通过config指定了requirejs的baseUrl，那么所有的模块路径查找都会以这个baseUrl作为基础，去查找 requirejs可以通过config来配置一些内容baseUrl12345678910111213require.config(&#123; //所有模块的路径查找，都会以这个baseUrl指定的路径为基础 //一般情况下就是找所有模块都能够共享的目录，作为baseUrl baseUrl: &quot;&quot;, //paths属性可以为每一个模块配置别名 //以后在使用模块的时候，不需要再去写那么长的真实路径了，而直接使用别名即可 paths: &#123; //键： 别名名称 //值： 真实的模块路径 &quot;xm&quot;: &quot;modules1/modules2/modules3/moduleXM&quot; &#125;&#125;);]]></content>
+      <categories>
+        <category>模块化</category>
+        <category>js</category>
+        <category>bxg-day05</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js的数据类型]]></title>
+    <url>%2F2015%2F05%2F29%2Fjs%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%2F</url>
+    <content type="text"><![CDATA[基本类型123string var str = "abc";number var num = 1;boolean var flag = true; 复合类型 复杂类型12345678910Object var obj = new Object();function Array var arr = new Array();Date var now = new Date();RegExp var reg = new RegExp();Math String var str = new String();Number var num = new Number();Boolean var bl = new Boolean(); 空类型12nullundefined 如何获取数据类型typeof 数据 typeof关键字的返回值是字符串类型的一个字符串，表示数据的类型！typeof null 返回的是 object 但是不代表这个null是一个复杂类型的数据typoef undefined 返回的是 undefined 获取object后面的数据类型12345678910function getType(obj)&#123; return Object.prototype.toString.call(obj).slice(8, -1);&#125;var arr = [];var now = new Date();var reg = /\d/;console.log(getType(arr)); //Arrayconsole.log(getType(now)); //Dateconsole.log(getType(reg)); //RegExp]]></content>
+      <categories>
+        <category>js</category>
+        <category>面向对象day01</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[全等和等于的区别]]></title>
+    <url>%2F2015%2F05%2F29%2F%E5%85%A8%E7%AD%89%E5%92%8C%E7%AD%89%E4%BA%8E%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"><![CDATA[相等 == 只判断值是否相同 全等 === 先判断类型是否一致，然后再判断值是否相等 123var obj = &#123;&#125;;var obj1 = &#123;&#125;;obj == obj1; 对象类型的数据进行对比，是比较的存储地址 1234console.log(&#123;&#125; == &#123;&#125;); //falseconsole.log(1 === "1"); //falseconsole.log(NaN == NaN); //falseconsole.log(null === undefined); //false 当一个值类型的数据和引用类型的数据发生运算的时候 (+ - * / ==) 会遵守如下的规则： 1. 先调用这个引用类型数据的valueOf方法，获取返回值之后参与运算，如果能运算，那么直接得出结果 2. 如果不能运算, 继续调用该引用类型数据的toString方法，获取返回值参与运算，这个肯定是可以的出来结果的！1234567console.log([] == ![]);//console.log([] == false);//console.log([].valueOf() == false);//[].valueOf()返回值为数组本身，所以不能参与运算//console.log([].toString() == false);//console.log("" == false);//结果就是true 123456console.log(&#123;&#125; == !&#123;&#125;);//console.log(&#123;&#125; == false);//console.log(&#123;&#125;.valueOf() == false);//console.log(&#123;&#125;.toString() == false);//console.log("[object Object]" == false);//结果就是false 123456var obj = &#123; valueOf: function()&#123; return 123; &#125;&#125;;console.log(obj + 1); //124]]></content>
+      <categories>
+        <category>js</category>
+        <category>面向对象day01</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[bash命令介绍]]></title>
+    <url>%2F2015%2F05%2F25%2Fgit-bash%20%E5%AD%A6%E4%B9%A0%2F</url>
+    <content type="text"><![CDATA[bash命令的基本格式说明（语法）命令的名称 [-选项] [参数] 命令的介绍切换目录的命令cd: change directory12cd Desktop// cd 要切换到的目录的路径 显示当前所在的目录pwd: print work directory 显示当前目录下的内容ls: list 选项： -a All显示所有内容选项： -l 以列表形式显示 -al 可以同时使用两个选项 当然也可以 分开写 ls -a -l drwxr-xr-x第一个d表示的就是当前是一个目录，如果第一个是- 就是一个文件后面的rwxr-xr-x分为三组来理解第一组的rwx r就是read，可读，w就是write，可写，x就是Execute，可执行，文件所有者的权限第二组的r-x 中间的-表示w权限没有 是文件所有者所在的用户组的权限第三组的r-x 是指其他的所有用户的权限 ls -选项 参数(你要显示哪个目录的内容就写那个目录的路径)参数如果不写，则默认显示当前的目录的内容 清空屏幕clear 创建文件touch1touch 文件名（或者文件路径） 删除文件rm 1rm 文件名（文件路径） 如果要通过rm命令删除文件夹，则需要添加一个选项 -r1rm -r 文件夹名称（文件夹路径） 选项 -f 可以强制删除一些文件 删除文件夹还可以通过 rmdir 命令，但是这个命令只可以删空文件夹 创建文件夹mkdir命令 mkdir 文件夹名称 或者文件夹路径 读取文件内容cat 一次性展示文件中所有的内容cat 文件名（文件路径） less 可以分页展示文件 按空格或者回车可以进行翻页 方向键也可以用来操作展示完毕之后可以通过q键退出 echo将指定的内容进行输出 默认输出到了屏幕上 输出重定向 ： 可以将输出内容重定向到指定的位置 覆盖操做echo 123 &gt; 1.txt : 追加操作 复制文件的操作cp cp 文件名 要复制成的文件名 移动文件的命令mv mv 文件名 目标位置 mv 可以用来做文件重命名的操作！]]></content>
+      <tags>
+        <tag>git bash</tag>
+      </tags>
+  </entry>
+</search>
