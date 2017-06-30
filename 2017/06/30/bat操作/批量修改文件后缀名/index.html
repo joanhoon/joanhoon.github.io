@@ -1,0 +1,831 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="bat," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="无需软件批量修改文件后缀名？怎么通过命令行批量修改文件后缀名?　　有时候由于文件后缀名格式不同，有的时候我们需要对文件扩展名进行修改，或者文件扩展名丢失，需要添加。如果数量少的文件那还简单直接修改就好了。如果很多怎么办呢？下面小编告诉您一个不需要安装软件也能操作的办法 一. 查看\显示文件扩展名　　既然要修改文件的后缀名，那么我们首先应该查看一下文件的扩展名。（已经知道的直接看后面批量修改的部分）">
+<meta name="keywords" content="bat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="批量修改文件后缀名">
+<meta property="og:url" content="http://yoursite.com/2017/06/30/bat操作/批量修改文件后缀名/index.html">
+<meta property="og:site_name" content="JoanHoon">
+<meta property="og:description" content="无需软件批量修改文件后缀名？怎么通过命令行批量修改文件后缀名?　　有时候由于文件后缀名格式不同，有的时候我们需要对文件扩展名进行修改，或者文件扩展名丢失，需要添加。如果数量少的文件那还简单直接修改就好了。如果很多怎么办呢？下面小编告诉您一个不需要安装软件也能操作的办法 一. 查看\显示文件扩展名　　既然要修改文件的后缀名，那么我们首先应该查看一下文件的扩展名。（已经知道的直接看后面批量修改的部分）">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=c11ce851d01b0ef46ce8985eedc551a1/78310a55b319ebc4d29bd6e68026cffc1f1716e9.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/06/30/bat操作/批量修改文件后缀名/3.png">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=30abf3770ed79123e0e094749d345917/fcfaaf51f3deb48f767f02a1f21f3a292df578bf.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=c18b3051aad3fd1f3609a23a004e25ce/50da81cb39dbb6fd116646590b24ab18972b378b.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=a37b040ad488d43ff0a991f24d1fd2aa/aa64034f78f0f736f0bbef7e0855b319ebc41303.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=a0c19abcd5ca7bcb7d7bc72f8e086b3f/cb8065380cd791234512370baf345982b3b780db.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=9e0a55b2fe039245a1b5e10fb795a4a8/4afbfbedab64034f25346179adc379310b551dd7.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=80db97a63b01213fcf334edc64e636f8/dc54564e9258d109be150acdd358ccbf6d814dde.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=082ba7e2c9ef76093c0b999f1edca301/9825bc315c6034a85a001bfec9134954082376ea.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=6ba030a0cc1b9d168ac79a61c3dfb4eb/fc1f4134970a304e38790285d3c8a786c9175c71.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=7ac9d4596f224f4a5799731339f79044/e850352ac65c10389b716cbdb0119313b07e8946.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=843fb7eb442309f7e76fad12420f0c39/11385343fbf2b21158662731c88065380cd78e01.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=c0273151aad3fd1f3609a23a004f25ce/50da81cb39dbb6fd10ca47590b24ab18972b373f.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=9e516b4c9045d688a302b2a494c37dab/faedab64034f78f0aa9a388c7b310a55b3191c3f.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=d05f23c08e5494ee87220f191df4e0e1/d0c8a786c9177f3e44885e7272cf3bc79f3d5614.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=a9a003a1f21f3a295ac8d5cea924bce3/c8177f3e6709c93d553bac889d3df8dcd0005487.jpg">
+<meta property="og:image" content="https://imgsa.baidu.com/exp/w=500/sign=c73aea51d01b0ef46ce8985eedc551a1/78310a55b319ebc4d4bdd4e68026cffc1f171683.jpg">
+<meta property="og:updated_time" content="2017-06-30T11:54:37.631Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="批量修改文件后缀名">
+<meta name="twitter:description" content="无需软件批量修改文件后缀名？怎么通过命令行批量修改文件后缀名?　　有时候由于文件后缀名格式不同，有的时候我们需要对文件扩展名进行修改，或者文件扩展名丢失，需要添加。如果数量少的文件那还简单直接修改就好了。如果很多怎么办呢？下面小编告诉您一个不需要安装软件也能操作的办法 一. 查看\显示文件扩展名　　既然要修改文件的后缀名，那么我们首先应该查看一下文件的扩展名。（已经知道的直接看后面批量修改的部分）">
+<meta name="twitter:image" content="https://imgsa.baidu.com/exp/w=500/sign=c11ce851d01b0ef46ce8985eedc551a1/78310a55b319ebc4d29bd6e68026cffc1f1716e9.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/06/30/bat操作/批量修改文件后缀名/"/>
+
+
+
+
+
+  <title>批量修改文件后缀名 | JoanHoon</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">JoanHoon</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/30/bat操作/批量修改文件后缀名/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Joan Hoon">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JoanHoon">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">批量修改文件后缀名</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-30T18:50:39+08:00">
+                2017-06-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/bat/" itemprop="url" rel="index">
+                    <span itemprop="name">bat</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>无需软件批量修改文件后缀名？怎么通过命令行批量修改文件后缀名?</strong><br>　　有时候由于文件后缀名格式不同，有的时候我们需要对文件扩展名进行修改，或者文件扩展名丢失，需要添加。如果数量少的文件那还简单直接修改就好了。如果很多怎么办呢？下面小编告诉您一个不需要安装软件也能操作的办法</p>
+<h1 id="一-查看-显示文件扩展名"><a href="#一-查看-显示文件扩展名" class="headerlink" title="一. 查看\显示文件扩展名"></a>一. 查看\显示文件扩展名</h1><p>　　既然要修改文件的后缀名，那么我们首先应该查看一下文件的扩展名。（已经知道的直接看后面批量修改的部分）</p>
+<ol>
+<li><p>直接选择文件属性，即可查看文件的类型。<br><img src="https://imgsa.baidu.com/exp/w=500/sign=c11ce851d01b0ef46ce8985eedc551a1/78310a55b319ebc4d29bd6e68026cffc1f1716e9.jpg" alt=""></p>
+</li>
+<li><p>如果要直接显示文件后缀名，可以按照下面操作如下图。<br>下面以win10为例，打开任意文件夹==&gt;查看==&gt;”文件扩展名” 打上勾<br><img src="/2017/06/30/bat操作/批量修改文件后缀名/3.png" alt=""><br>下面以Xp为例，找到开始==&gt;控制面板==&gt;文件夹选项==&gt;点击查看==&gt;找到把”隐藏已知文件夹类型的扩展名”前面那个钩去掉然后应用<br><img src="https://imgsa.baidu.com/exp/w=500/sign=30abf3770ed79123e0e094749d345917/fcfaaf51f3deb48f767f02a1f21f3a292df578bf.jpg" alt=""></p>
+</li>
+</ol>
+<h1 id="二-修改文件后缀名-扩展名（手动修改）"><a href="#二-修改文件后缀名-扩展名（手动修改）" class="headerlink" title="二. 修改文件后缀名\扩展名（手动修改）"></a>二. 修改文件后缀名\扩展名（手动修改）</h1><p>　　已经能正常查看到文件后缀名了，如果要修改文件后缀名，扩展名很简单直接选择文件，右键重命名。或者按住键盘“F2”键，进行修改。</p>
+<ol>
+<li>这是针对当个文件的操作方法，批量修改看后面<br><img src="https://imgsa.baidu.com/exp/w=500/sign=c18b3051aad3fd1f3609a23a004e25ce/50da81cb39dbb6fd116646590b24ab18972b378b.jpg" alt=""></li>
+</ol>
+<h1 id="三-批量修改文件扩展名"><a href="#三-批量修改文件扩展名" class="headerlink" title="三. 批量修改文件扩展名"></a>三. 批量修改文件扩展名</h1><ol>
+<li>把需要修改扩展名的文件都拷贝放到一个文件夹里面，如下图<br><img src="https://imgsa.baidu.com/exp/w=500/sign=a37b040ad488d43ff0a991f24d1fd2aa/aa64034f78f0f736f0bbef7e0855b319ebc41303.jpg" alt=""><br>只是修改特定的后缀名文件。（GIF —- JPG）<br>如下图：我只想修改文件后缀名的是GIF的文件改成JPG<br>操作步骤:</li>
+<li>在当前这个文件夹下面，新建一个记事本文件。如下图<br><img src="https://imgsa.baidu.com/exp/w=500/sign=a0c19abcd5ca7bcb7d7bc72f8e086b3f/cb8065380cd791234512370baf345982b3b780db.jpg" alt=""></li>
+<li>打开新建的记事本文件在里面输入 ren <em>.gif    </em>.jpg 下面内容，如下图<br>输入格式ren 空格  星号 点 需要修改的文件后缀名   空格星号 点需要改成的文件后缀名 如下图。(注意：在*之前有一个英文的空格)<br><img src="https://imgsa.baidu.com/exp/w=500/sign=9e0a55b2fe039245a1b5e10fb795a4a8/4afbfbedab64034f25346179adc379310b551dd7.jpg" alt=""></li>
+<li>设置好之后，保存文件。同时吧这个文件改成 .bat后缀名的文件（这个非常重要）如下图。改成 批量修改文件后缀名.bat<br><img src="https://imgsa.baidu.com/exp/w=500/sign=80db97a63b01213fcf334edc64e636f8/dc54564e9258d109be150acdd358ccbf6d814dde.jpg" alt=""><br><img src="https://imgsa.baidu.com/exp/w=500/sign=082ba7e2c9ef76093c0b999f1edca301/9825bc315c6034a85a001bfec9134954082376ea.jpg" alt=""></li>
+<li>设置好之后，点击运行刚刚那个BAT文件就好了。注意看现在是gif文件格式<br><img src="https://imgsa.baidu.com/exp/w=500/sign=6ba030a0cc1b9d168ac79a61c3dfb4eb/fc1f4134970a304e38790285d3c8a786c9175c71.jpg" alt=""></li>
+<li>双击刚刚那个文件，看到没有，文件全部变成Jpg后缀名字了，怎么样是不是很简单？<br><img src="https://imgsa.baidu.com/exp/w=500/sign=7ac9d4596f224f4a5799731339f79044/e850352ac65c10389b716cbdb0119313b07e8946.jpg" alt=""></li>
+</ol>
+<h1 id="四-批量修改不同的文件扩展名-后缀名"><a href="#四-批量修改不同的文件扩展名-后缀名" class="headerlink" title="四. 批量修改不同的文件扩展名\后缀名"></a>四. 批量修改不同的文件扩展名\后缀名</h1><ol>
+<li>如果我整个文件夹下面的所有类型的文件都要修改怎么办呢？如下图  什么类型的文件都有呢<br><img src="https://imgsa.baidu.com/exp/w=500/sign=843fb7eb442309f7e76fad12420f0c39/11385343fbf2b21158662731c88065380cd78e01.jpg" alt=""></li>
+<li>其实也很简单，只需要修改一个参数就好了。如下图 找到刚刚那个bat文件，右键编辑 – 或者用记事本打开。( <strong>注意：在*之前有一个英文的空格</strong> ) 把命令改成， ren <em>.</em>  *.gif　　格式　ren 空格 星点 星  空格 星 点 文件后缀名<br><img src="https://imgsa.baidu.com/exp/w=500/sign=c0273151aad3fd1f3609a23a004f25ce/50da81cb39dbb6fd10ca47590b24ab18972b373f.jpg" alt=""><br><img src="https://imgsa.baidu.com/exp/w=500/sign=9e516b4c9045d688a302b2a494c37dab/faedab64034f78f0aa9a388c7b310a55b3191c3f.jpg" alt=""></li>
+<li>再次运行，你会发现文件夹下面的所有文件都变成 gif文件啦。是不是很简单<br><img src="https://imgsa.baidu.com/exp/w=500/sign=d05f23c08e5494ee87220f191df4e0e1/d0c8a786c9177f3e44885e7272cf3bc79f3d5614.jpg" alt=""></li>
+</ol>
+<h1 id="五-如何批量修改不同路径的文件扩展名-后缀名"><a href="#五-如何批量修改不同路径的文件扩展名-后缀名" class="headerlink" title="五. 如何批量修改不同路径的文件扩展名\后缀名"></a>五. 如何批量修改不同路径的文件扩展名\后缀名</h1><ol>
+<li>比如你要修改 C:\Documents andSettings\Administrator\桌面\批量修改文件后缀名 这个文件夹内的文件，你可以在任意 文件夹上新建一个 bat文件。输入下面内容<br><img src="https://imgsa.baidu.com/exp/w=500/sign=a9a003a1f21f3a295ac8d5cea924bce3/c8177f3e6709c93d553bac889d3df8dcd0005487.jpg" alt=""></li>
+<li>就是刚刚那个2种情况，前面添加一个 cd 空格 后面是文件夹的路径啦<br>这个路径怎么获取？ 打开的文件夹上面地址栏上就有啦<br>你如果要修改以后只需要在那个文件里面，编辑修改cd 后面的那一串路径就好了，怎么样是不是很简单？<br><img src="https://imgsa.baidu.com/exp/w=500/sign=c73aea51d01b0ef46ce8985eedc551a1/78310a55b319ebc4d4bdd4e68026cffc1f171683.jpg" alt=""></li>
+</ol>
+<h1 id="六-注意事项"><a href="#六-注意事项" class="headerlink" title="六. 注意事项"></a>六. 注意事项</h1><ol>
+<li>bat格式文件，是windows批处理文件。</li>
+<li>以上提供的批量修改文件后缀名只对修改有作用，文件每个后缀名代表的文件类型不同，如果不同类型文件直接修改后缀名可能会导致文件打不开或者不兼容的问题。</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/bat/" <i class="fa fa-tag"></i> bat</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/26/hexo/搭建-hexo，在执行-hexo-deploy-后-出现-error-deployer-not-found-github-的错误/" rel="next" title="搭建 hexo，在执行 hexo deploy 后,出现 error deployer not found:github 的错误">
+                <i class="fa fa-chevron-left"></i> 搭建 hexo，在执行 hexo deploy 后,出现 error deployer not found:github 的错误
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Joan Hoon" />
+          <p class="site-author-name" itemprop="name">Joan Hoon</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一-查看-显示文件扩展名"><span class="nav-number">1.</span> <span class="nav-text">一. 查看\显示文件扩展名</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二-修改文件后缀名-扩展名（手动修改）"><span class="nav-number">2.</span> <span class="nav-text">二. 修改文件后缀名\扩展名（手动修改）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三-批量修改文件扩展名"><span class="nav-number">3.</span> <span class="nav-text">三. 批量修改文件扩展名</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四-批量修改不同的文件扩展名-后缀名"><span class="nav-number">4.</span> <span class="nav-text">四. 批量修改不同的文件扩展名\后缀名</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五-如何批量修改不同路径的文件扩展名-后缀名"><span class="nav-number">5.</span> <span class="nav-text">五. 如何批量修改不同路径的文件扩展名\后缀名</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六-注意事项"><span class="nav-number">6.</span> <span class="nav-text">六. 注意事项</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Joan Hoon</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.1"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
