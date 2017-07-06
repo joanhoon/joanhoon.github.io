@@ -31,19 +31,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[模块化]]></title>
-    <url>%2F2015%2F06%2F29%2F%E6%A8%A1%E5%9D%97%E5%8C%96%2F%E6%A8%A1%E5%9D%97%E5%8C%96%2F</url>
-    <content type="text"><![CDATA[简单的使用js文件作为模块的缺陷 全局变量污染 引用js文件的时候，次序非常重要，而且比较麻烦 模块化的优势 可以将公共的部分定义成模块，方便复用 解决全局变量污染的问题 模块之间的依赖关系，非常明确，而且在应用模块的时候，根本不需要考虑依赖的先后顺序问题。 前端模块化模块化的标准 CommonJS: 是一个模块化的标准。Node.js在使用的一个模块化的标准 AMD: Async Module Definition, 在CommonJS基础上衍生出来的适用于前端开发中的模块化标准 AMD. 尽早将所有的模块全部加载进来 require.js CMD: Common Module Definition在CommonJS基础上衍生出来的适用于前端开发中的模块化标准 CMD. 用到之的时候再加载， as lazy as possible sea.js AMD没有明显的BUG，CMD明显没有BUG 模块化的是实现（require.js）require.js 只是一个js文件，这个js文件可以帮助我们实现前端模块化，他遵循的标准就是AMD标准。 定义模块1234define(function()&#123; //模块中所有的内容 console.log("Hello, 我是一个模块");&#125;) 引用模块123require(["模块的名称"], function()&#123; &#125;) 注意事项如果模块只是执行一些代码实现指定的功能，那么直接引用该模块，功能即可实现。但是如果模块的存在是为了给我们提供一些方法，对象，其他的内容让我们使用的话，就需要给这个模块一个产出，使用return语句将要提供给别人使用的内容进行返回，使用该模块的使用，需要在require的第二个参数的函数中书写一个形参来接收这个内容，就能达到使用的效果了！ 模块依赖项的处理如果定义一个模块的时候，这个模块要依赖于其他模块来实现，那么我们需要给这个模块指定依赖项 define([“依赖项1”,”依赖项2”…”依赖项N”], function(){ //模块的功能代码}) 如果模块的依赖项有给模块提供内容使用，那么需要在当前模块的回调函数中添加形参来接收依赖项模块的返回值，这里的形参和依赖项是一一对应的，如果存在好多依赖项，有的依赖项有产出，有的没有，那我们一般会将所有有产出的依赖项放在前面，没有的放在后面，这样可以省略掉没有产出模块的形参 requirejs的入口文件设置data-main可以给请求requirejs的script标签设置一个data-main属性，这个属性中放的是一个文件的路径，在requirejs加载完毕之后，会自动去执行data-main这个路径中指向的文件中的js代码！ data-main中的内容是异步加载的，如果下面有要基于data-main的功能实现的内容，那么requirejs不能保证data-main是在下面的内容之前执行的 模块路径查找的问题 如果直接在html文件中书写script标签，在标签内使用require来加载某个模块，那么会以当前的这个html文件作为参照，去找相对路径 如果我们是在入口文件中使用require加载的模块，那么这个时候是参照data-main指定的这个入口文件所在的目录来找模块的路径的！ 如果通过config指定了requirejs的baseUrl，那么所有的模块路径查找都会以这个baseUrl作为基础，去查找 requirejs可以通过config来配置一些内容baseUrl12345678910111213require.config(&#123; //所有模块的路径查找，都会以这个baseUrl指定的路径为基础 //一般情况下就是找所有模块都能够共享的目录，作为baseUrl baseUrl: &quot;&quot;, //paths属性可以为每一个模块配置别名 //以后在使用模块的时候，不需要再去写那么长的真实路径了，而直接使用别名即可 paths: &#123; //键： 别名名称 //值： 真实的模块路径 &quot;xm&quot;: &quot;modules1/modules2/modules3/moduleXM&quot; &#125;&#125;);]]></content>
-      <categories>
-        <category>模块化</category>
-        <category>js</category>
-        <category>bxg-day05</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[具名模块和匿名模块]]></title>
     <url>%2F2015%2F06%2F29%2F%E6%A8%A1%E5%9D%97%E5%8C%96%2F%E5%85%B7%E5%90%8D%E6%A8%A1%E5%9D%97%E5%92%8C%E5%8C%BF%E5%90%8D%E6%A8%A1%E5%9D%97%2F</url>
     <content type="text"><![CDATA[匿名模块123define([], function()&#123; &#125;) 具名模块123define("a", [], function()&#123; &#125;) 模块在声明的时候，给define传递个第一个参数可以是该模块的名称 在config中做配置的时候，别名尽量和具名模块的声明中的模块名称保持一致！可以保证不出错！！！]]></content>
@@ -57,12 +44,13 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[js的数据类型]]></title>
-    <url>%2F2015%2F05%2F29%2Fjs%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%2F</url>
-    <content type="text"><![CDATA[基本类型123string var str = "abc";number var num = 1;boolean var flag = true; 复合类型 复杂类型12345678910Object var obj = new Object();function Array var arr = new Array();Date var now = new Date();RegExp var reg = new RegExp();Math String var str = new String();Number var num = new Number();Boolean var bl = new Boolean(); 空类型12nullundefined 如何获取数据类型typeof 数据 typeof关键字的返回值是字符串类型的一个字符串，表示数据的类型！typeof null 返回的是 object 但是不代表这个null是一个复杂类型的数据typoef undefined 返回的是 undefined 获取object后面的数据类型12345678910function getType(obj)&#123; return Object.prototype.toString.call(obj).slice(8, -1);&#125;var arr = [];var now = new Date();var reg = /\d/;console.log(getType(arr)); //Arrayconsole.log(getType(now)); //Dateconsole.log(getType(reg)); //RegExp]]></content>
+    <title><![CDATA[模块化]]></title>
+    <url>%2F2015%2F06%2F29%2F%E6%A8%A1%E5%9D%97%E5%8C%96%2F%E6%A8%A1%E5%9D%97%E5%8C%96%2F</url>
+    <content type="text"><![CDATA[简单的使用js文件作为模块的缺陷 全局变量污染 引用js文件的时候，次序非常重要，而且比较麻烦 模块化的优势 可以将公共的部分定义成模块，方便复用 解决全局变量污染的问题 模块之间的依赖关系，非常明确，而且在应用模块的时候，根本不需要考虑依赖的先后顺序问题。 前端模块化模块化的标准 CommonJS: 是一个模块化的标准。Node.js在使用的一个模块化的标准 AMD: Async Module Definition, 在CommonJS基础上衍生出来的适用于前端开发中的模块化标准 AMD. 尽早将所有的模块全部加载进来 require.js CMD: Common Module Definition在CommonJS基础上衍生出来的适用于前端开发中的模块化标准 CMD. 用到之的时候再加载， as lazy as possible sea.js AMD没有明显的BUG，CMD明显没有BUG 模块化的是实现（require.js）require.js 只是一个js文件，这个js文件可以帮助我们实现前端模块化，他遵循的标准就是AMD标准。 定义模块1234define(function()&#123; //模块中所有的内容 console.log("Hello, 我是一个模块");&#125;) 引用模块123require(["模块的名称"], function()&#123; &#125;) 注意事项如果模块只是执行一些代码实现指定的功能，那么直接引用该模块，功能即可实现。但是如果模块的存在是为了给我们提供一些方法，对象，其他的内容让我们使用的话，就需要给这个模块一个产出，使用return语句将要提供给别人使用的内容进行返回，使用该模块的使用，需要在require的第二个参数的函数中书写一个形参来接收这个内容，就能达到使用的效果了！ 模块依赖项的处理如果定义一个模块的时候，这个模块要依赖于其他模块来实现，那么我们需要给这个模块指定依赖项 define([“依赖项1”,”依赖项2”…”依赖项N”], function(){ //模块的功能代码}) 如果模块的依赖项有给模块提供内容使用，那么需要在当前模块的回调函数中添加形参来接收依赖项模块的返回值，这里的形参和依赖项是一一对应的，如果存在好多依赖项，有的依赖项有产出，有的没有，那我们一般会将所有有产出的依赖项放在前面，没有的放在后面，这样可以省略掉没有产出模块的形参 requirejs的入口文件设置data-main可以给请求requirejs的script标签设置一个data-main属性，这个属性中放的是一个文件的路径，在requirejs加载完毕之后，会自动去执行data-main这个路径中指向的文件中的js代码！ data-main中的内容是异步加载的，如果下面有要基于data-main的功能实现的内容，那么requirejs不能保证data-main是在下面的内容之前执行的 模块路径查找的问题 如果直接在html文件中书写script标签，在标签内使用require来加载某个模块，那么会以当前的这个html文件作为参照，去找相对路径 如果我们是在入口文件中使用require加载的模块，那么这个时候是参照data-main指定的这个入口文件所在的目录来找模块的路径的！ 如果通过config指定了requirejs的baseUrl，那么所有的模块路径查找都会以这个baseUrl作为基础，去查找 requirejs可以通过config来配置一些内容baseUrl12345678910111213require.config(&#123; //所有模块的路径查找，都会以这个baseUrl指定的路径为基础 //一般情况下就是找所有模块都能够共享的目录，作为baseUrl baseUrl: &quot;&quot;, //paths属性可以为每一个模块配置别名 //以后在使用模块的时候，不需要再去写那么长的真实路径了，而直接使用别名即可 paths: &#123; //键： 别名名称 //值： 真实的模块路径 &quot;xm&quot;: &quot;modules1/modules2/modules3/moduleXM&quot; &#125;&#125;);]]></content>
       <categories>
+        <category>模块化</category>
         <category>js</category>
-        <category>面向对象day01</category>
+        <category>bxg-day05</category>
       </categories>
       <tags>
         <tag>js</tag>
@@ -72,6 +60,18 @@
     <title><![CDATA[全等和等于的区别]]></title>
     <url>%2F2015%2F05%2F29%2F%E5%85%A8%E7%AD%89%E5%92%8C%E7%AD%89%E4%BA%8E%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
     <content type="text"><![CDATA[相等 == 只判断值是否相同 全等 === 先判断类型是否一致，然后再判断值是否相等 123var obj = &#123;&#125;;var obj1 = &#123;&#125;;obj == obj1; 对象类型的数据进行对比，是比较的存储地址 1234console.log(&#123;&#125; == &#123;&#125;); //falseconsole.log(1 === "1"); //falseconsole.log(NaN == NaN); //falseconsole.log(null === undefined); //false 当一个值类型的数据和引用类型的数据发生运算的时候 (+ - * / ==) 会遵守如下的规则： 1. 先调用这个引用类型数据的valueOf方法，获取返回值之后参与运算，如果能运算，那么直接得出结果 2. 如果不能运算, 继续调用该引用类型数据的toString方法，获取返回值参与运算，这个肯定是可以的出来结果的！1234567console.log([] == ![]);//console.log([] == false);//console.log([].valueOf() == false);//[].valueOf()返回值为数组本身，所以不能参与运算//console.log([].toString() == false);//console.log("" == false);//结果就是true 123456console.log(&#123;&#125; == !&#123;&#125;);//console.log(&#123;&#125; == false);//console.log(&#123;&#125;.valueOf() == false);//console.log(&#123;&#125;.toString() == false);//console.log("[object Object]" == false);//结果就是false 123456var obj = &#123; valueOf: function()&#123; return 123; &#125;&#125;;console.log(obj + 1); //124]]></content>
+      <categories>
+        <category>js</category>
+        <category>面向对象day01</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js的数据类型]]></title>
+    <url>%2F2015%2F05%2F29%2Fjs%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%2F</url>
+    <content type="text"><![CDATA[基本类型123string var str = "abc";number var num = 1;boolean var flag = true; 复合类型 复杂类型12345678910Object var obj = new Object();function Array var arr = new Array();Date var now = new Date();RegExp var reg = new RegExp();Math String var str = new String();Number var num = new Number();Boolean var bl = new Boolean(); 空类型12nullundefined 如何获取数据类型typeof 数据 typeof关键字的返回值是字符串类型的一个字符串，表示数据的类型！typeof null 返回的是 object 但是不代表这个null是一个复杂类型的数据typoef undefined 返回的是 undefined 获取object后面的数据类型12345678910function getType(obj)&#123; return Object.prototype.toString.call(obj).slice(8, -1);&#125;var arr = [];var now = new Date();var reg = /\d/;console.log(getType(arr)); //Arrayconsole.log(getType(now)); //Dateconsole.log(getType(reg)); //RegExp]]></content>
       <categories>
         <category>js</category>
         <category>面向对象day01</category>
