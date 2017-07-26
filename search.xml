@@ -4,30 +4,40 @@
     <title><![CDATA[批量修改文件后缀名]]></title>
     <url>%2F2017%2F06%2F30%2Fbat%E6%93%8D%E4%BD%9C%2F%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E5%90%8D%2F</url>
     <content type="text"><![CDATA[无需软件批量修改文件后缀名？怎么通过命令行批量修改文件后缀名? 有时候由于文件后缀名格式不同，有的时候我们需要对文件扩展名进行修改，或者文件扩展名丢失，需要添加。如果数量少的文件那还简单直接修改就好了。如果很多怎么办呢？下面小编告诉您一个不需要安装软件也能操作的办法 一. 查看\显示文件扩展名 既然要修改文件的后缀名，那么我们首先应该查看一下文件的扩展名。（已经知道的直接看后面批量修改的部分） 直接选择文件属性，即可查看文件的类型。 如果要直接显示文件后缀名，可以按照下面操作如下图。下面以win10为例，打开任意文件夹==&gt;查看==&gt;”文件扩展名” 打上勾下面以Xp为例，找到开始==&gt;控制面板==&gt;文件夹选项==&gt;点击查看==&gt;找到把”隐藏已知文件夹类型的扩展名”前面那个钩去掉然后应用 二. 修改文件后缀名\扩展名（手动修改） 已经能正常查看到文件后缀名了，如果要修改文件后缀名，扩展名很简单直接选择文件，右键重命名。或者按住键盘“F2”键，进行修改。 这是针对当个文件的操作方法，批量修改看后面 三. 批量修改文件扩展名 把需要修改扩展名的文件都拷贝放到一个文件夹里面，如下图只是修改特定的后缀名文件。（GIF —- JPG）如下图：我只想修改文件后缀名的是GIF的文件改成JPG操作步骤: 在当前这个文件夹下面，新建一个记事本文件。如下图 打开新建的记事本文件在里面输入 ren .gif .jpg 下面内容，如下图输入格式ren 空格 星号 点 需要修改的文件后缀名 空格星号 点需要改成的文件后缀名 如下图。(注意：在*之前有一个英文的空格) 设置好之后，保存文件。同时吧这个文件改成 .bat后缀名的文件（这个非常重要）如下图。改成 批量修改文件后缀名.bat 设置好之后，点击运行刚刚那个BAT文件就好了。注意看现在是gif文件格式 双击刚刚那个文件，看到没有，文件全部变成Jpg后缀名字了，怎么样是不是很简单？ 四. 批量修改不同的文件扩展名\后缀名 如果我整个文件夹下面的所有类型的文件都要修改怎么办呢？如下图 什么类型的文件都有呢 其实也很简单，只需要修改一个参数就好了。如下图 找到刚刚那个bat文件，右键编辑 – 或者用记事本打开。( 注意：在*之前有一个英文的空格 ) 把命令改成， ren . *.gif 格式 ren 空格 星点 星 空格 星 点 文件后缀名 再次运行，你会发现文件夹下面的所有文件都变成 gif文件啦。是不是很简单 五. 如何批量修改不同路径的文件扩展名\后缀名 比如你要修改 C:\Documents andSettings\Administrator\桌面\批量修改文件后缀名 这个文件夹内的文件，你可以在任意 文件夹上新建一个 bat文件。输入下面内容 就是刚刚那个2种情况，前面添加一个 cd 空格 后面是文件夹的路径啦这个路径怎么获取？ 打开的文件夹上面地址栏上就有啦你如果要修改以后只需要在那个文件里面，编辑修改cd 后面的那一串路径就好了，怎么样是不是很简单？ 六. 注意事项 bat格式文件，是windows批处理文件。 以上提供的批量修改文件后缀名只对修改有作用，文件每个后缀名代表的文件类型不同，如果不同类型文件直接修改后缀名可能会导致文件打不开或者不兼容的问题。]]></content>
-      <categories>
-        <category>bat</category>
-      </categories>
       <tags>
         <tag>bat</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[搭建 hexo，在执行 hexo deploy 后,出现 error deployer not found:github 的错误]]></title>
-    <url>%2F2017%2F06%2F26%2Fhexo%2F%E6%90%AD%E5%BB%BA-hexo%EF%BC%8C%E5%9C%A8%E6%89%A7%E8%A1%8C-hexo-deploy-%E5%90%8E-%E5%87%BA%E7%8E%B0-error-deployer-not-found-github-%E7%9A%84%E9%94%99%E8%AF%AF%2F</url>
-    <content type="text"><![CDATA[当 hexo g -d 出现error deployer not found:github 的错误一、站点配置文件 _config.yml文件，deploy的type 的github需要改成git 二、pm install hexo-deployer-git –save 之后，然后再部署试试]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
+    <title><![CDATA[AngularJs04]]></title>
+    <url>%2F2016%2F07%2F11%2Fangular%2FAngularJs04%2F</url>
+    <content type="text"><![CDATA[服务的创建方式 service 12345678910模块对象 .service("服务名", ["注入服务", function(注入的服务)&#123; //通过this给服务添加属性和方法，最终提供给调用服务的人使用 //最终用户获取到的服务对象，其实就是使用本函数，构造出来 //也就是说用new的方式创建出来的 this.数据: 数据 this.方法= function()&#123; &#125; &#125;]) factory 12345678910模块对象 .factory("服务名", ["注入服务", function(注入的服务)&#123; //通过给obj对象添加属性和方法，最终提供给调用服务的人使用 //最终用户获取到的服务对象，其实就是使用本函数，使用工厂模式创建的 var obj = &#123;&#125;; 数据: 数据, 方法: function()&#123; &#125; return obj; &#125;]) value 12模块名称 .value("服务名称", &#123;//最终提供服务的对象，就是本对象！&#125;) constant 12模块名称 .constant("服务名称", &#123;//最终提供服务的对象，就是本对象！&#125;) provider 12345678910111213模块名称 .provider("服务名称", function()&#123; //这里可以声明一些变量，来保存服务的配置信息！ return &#123; //这个对象其实就是在config方法中获取到的 服务Provider 对象 //这个对象中必须包含一个$get方法 $get: function()&#123; return &#123; //这个对象就是最终的服务对象，用户所使用的服务就是本对象！ &#125; &#125; &#125; &#125;) Dirty-Check 脏检查机制，ng双向数据绑定的原理在angular初始化的时候，会先创建模块对象，初始化该模块，初始化模块的时候，会在该模块所管辖的view范围内，搜索所有的ng指令，找到指令之后，为每一个指令绑定一个$watcher,这个watcher会在数据或者dom元素发生改变的时候，被调用！ 每当有一个watcher被触发，那么就会开启一次新的$digest, $digest中，会对所有的$watcher，一次执行来检测是否有数据变化，如果有变换，会重新启动一次$digest, 依次循环，直到检测不到任何变化为止，最终开始更新dom操作！！ $apply 其实就是将相应的操作做了一个包装，先执行只写操作，然后再去调用$digest开始在脏检查 在angular中angular负责的所有的内容，都会默认的被$apply进行包裹，如果使用到了非angular控制的内容，比如setTimeout， 在这个里面的数据操作，将不会触发watcher，也就不会进行脏检查，所以，我们需要手动进行在脏检查 调用$apply来执行数据操作 123$scope.$apply(function()&#123; //做需要的数据操作&#125;) 做完数据操作之后，手动调用$digest方法 12//做完数据操作$scope.$digest(); angular-route使用步骤： 引入angular-route.js文件 在使用该angular-route模块的模块中加入依赖项 ngRoute 在模块的config方法中对angular-route进行配置 配置需要注入的内容为 $routeProvider 使用when方法进行配置12345678910111213141516171819202122232425262728angular .module("app", ["ngRoute"]) .config(["$routeProvider", function($routeProvider)&#123; $routeProvider.when("hash路径匹配规则", &#123; template: "视图html代码", //template属性和templateUrl只需要并且必须存在一个！ templateUrl: "视图路径", controller: "控制器" &#125;) //路由传参 在路由规则当中指定传参的形式，以及参数的名称 .when("hash路径/:参数名称", &#123; template: "视图html代码", templateUrl: "视图路径", controller: "控制器" &#125;) .otherwise(&#123; //这里做的就是当所有的匹配规则都不满足的情况下做的事情 //redierctTo：就是进行路径跳转的操作 redirectTo: "hash路径" &#125;) &#125;]) //获取路由传进来的参数 .controller("c1", ["$route", "$routeParams", function($route, $routeParams)&#123; //1. 通过$route服务获取 $route.current.pathParams; //1. 通过$routeParams服务获取 $routeParams; &#125;]) 更改哈希路径前的字符 #!/ 感叹号这个东西是在1.6之后默认会加上的1234.config(["$locationProvider", function($locationProvider)&#123; //hashPrefix可以更改上面那个感叹号， 如果不想要就给空字符串 $locationProvider.hashPrefix("");&#125;])]]></content>
       <tags>
-        <tag>hexo</tag>
+        <tag>AngularJs</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[hexo博客更换主题]]></title>
-    <url>%2F2017%2F06%2F25%2Fhexo%2Fhexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[第一步：选择主题主题从哪里找呢？官方就有提供了一些 主题，可以从中选择。官方提供的主题不少，可是并不一定有自己喜欢的或者又很难选择，这是个头疼的问题。之前我的博客主题就是随便选了一个还算看的过去的。但是再使用的过程中发现了一些问题： 不会自动生成目录不能自动获取摘要有很多配置不太方便 虽然有些问题，但并不影响整体使用，所以也没想去换主题了。前端时间逛知乎，发现这样一个问题：有哪些好看的 Hexo 主题？查看第一名的答案，有个主题排行，发现排第一名的主题 next。然后点开主题看了一下，发现主题简约，配置详细，能够解决我之前存在的问题，于是就决定选择这个主题了。 第二步：安装主题Hexo 有两份主要的配置文件（_config.yml），一份位于站点根目录下，另一份位于主题目录下。为了描述方便，在以下说明中，将前者称为 站点配置文件，后者称为 主题配置文件。 Hexo 安装主题的方式非常简单，只需要将主题文件放置于站点目录的 themes 目录下，然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。 下载 NexT 主题下载NexT主题稳定版： 前往 NexT 版本 发布页面 选择你所需要的版本，点击 Download ZIP 下载 Source Code (zip) 到本地。 或者 在 git bash 执行 git clone git@github.com:iissnan/hexo-theme-next.git 解压所下载的压缩包至站点的 themes 目录下，并将 解压后的文件夹名称更改为 next 启用NexT主题克隆/下载 完成后，打开 站点配置文件，找到 theme 字段，并将其值更改为 next。 验证主题是否启用运行 hexo s –debug，并访问 http://localhost:4000，确保站点正确运行。 第三步：配置选择 SchemeNexT 通过 Scheme 提供主题中的主题。 Mist 是 NexT 的第一款 Scheme。启用 Mist 仅需在 主题配置文件 中将 #scheme: Mist 前面的 # 注释去掉即可。 语言设置编辑 站点配置文件，将 language 设置成你所需要的语言。例如选用正体中文，则配置为： 1language: zh-Hans 可用的语言如以下表格所示： 语言 代码 设定值 English en language: en 简体中文 zh-Hans language: zh-Hans French fr-FR language: fr-FR 正体中文 zh-hk/zh-tw language: zh-hk Russian ru language: ru German de language: de 菜单设置菜单配置在 主题配置文件的 menu。 若你的站点运行在子目录中，请将链接前缀的 / 去掉。默认支持的菜单项有： 键值 设定值 commenthome home: / 主页archives archives: /archives 归档页categories categories: /categories 分类页（需手动创建）tags tags: /tags 标签页（需手动创建）about about: /about 关于页面 （需手动创建）commonweal commonweal: /404.html 公益 404 （需手动创建） 菜单示例配置：1234567menu: home: / archives: /archives #about: /about #categories: /categories tags: /tags #commonweal: /404.html 侧栏设置默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示。可以通过修改 主题配置文件 中的 sidebar 字段来控制侧栏的行为。 支持的选项有： post - 默认行为，在文章页面（拥有目录列表）时显示 always - 在所有页面中都显示 hide - 在所有页面中都隐藏（可以手动展开） 侧栏示例配置： 1sidebar: post 头像设置编辑 站点配置文件，新增字段 avatar， 值设置成头像的链接地址。 其中，头像的链接地址可以是： 地址 值 完整的互联网 URL https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460 站点内的地址 /uploads/avatar.jpg - 需要将你的头像图片放置在 站点的 source/uploads/（可能需要新建uploads目录） /images/avatar.jpg - 需要将你的头像图片放置在 主题的 source/images/ 目录下 头像设置示例： avatar: https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460 作者名称编辑 站点配置文件，设置 author 为你的昵称。 站点描述设置编辑 站点配置文件，设置 description 字段为你的站点描述。站点描述可以是你喜欢的一句签名:) 总结到这里整个主题更换和配置就已经完成，现在可以看到博客已经成为预期的样子了。如果更换其它的主题，也大同小异，都是这三步，只是涉及到具体的配置就有些区别而已。 更多的配置可以参考下面的链接： NexT使用文档https://hexo.io/zh-cn/docs/configuration.html最后附上NexT下载地址：https://github.com/iissnan/hexo-theme-next]]></content>
+    <title><![CDATA[AngularJs03]]></title>
+    <url>%2F2016%2F07%2F09%2Fangular%2FAngularJs03%2F</url>
+    <content type="text"><![CDATA[ng-bind单向绑定数据，类似于innerText操作，会将标签中的内容全部替换！1&lt;p ng-bind="数据"&gt;&lt;/p&gt; ngSanitize ng-bind-htmlngSanitize提供了可以将html代码渲染成dom元素的指令 ng-bind-html使用方式 引入文件 angular-sanitize.js 作为模块的依赖项，引入到模块中 直接使用ng-bind-html即可 ng-show ng-hide ng-if ng-switch ng-switch-when都是布尔值，控制元素的显示和隐藏 ng-show ng-hide 是给元素添加了display:noneng-if 如果是false，就将元素直接删掉了 ng-switch， 只有满足ng-switch-when 条件的才会出现，不满足的就删掉了 ng-submit ng-blur ng-change ng-dblclick过滤器的使用官方文档 1&lt;p ng-bind="数据 | 过滤器名称 : 过滤器参数 : 过滤器参数 "&gt;&lt;/p&gt; filter过滤器的使用filter过滤器是用来顾虑数组的，所以只能用在数组上1234&lt;p ng-repeat="数据 | filter : 可以直接是一个值"&gt;&lt;/p&gt;当传递一个值的时候，会在数组中对象的所有属性中去查找这个值，如果找到，就筛选出来&lt;p ng-repeat="数据 | filter : 还可以是一个对象"&gt;&lt;/p&gt;当传递一个对象的时候，会在数组中对象的指定的属性（传递的对象的属性名）中去查找这个对象的属性值，如果找到，就筛选出来 过滤器不仅可以通过指令在视图中调用也可以通过js代码来调用 12345//1. 注入$filter服务//2. 调用$filter获取过滤器var currency = $filter("currency");//3. 调用获取到的过滤器对数据进行过滤currency(要过滤的数据, 参数, 参数) 服务的使用123456789101112131415//创建服务angular .module("app", []) .service("服务名称", ["依赖项", function(获取依赖项)&#123; //通过使用this添加内容。来给使用该服务的地方暴露接口 this.方法 = function()&#123;&#125; &#125;]) //使用服务 .controller("c1", ["服务名称", fucntion(获取传入的服务)&#123; 传入的服务.方法()//这里就直接可以调用到服务中的内容了 &#125;])//如果服务和当前要使用服务的内容不在同一的模块中，那么首先需要将包含该服务的模块，作为依赖项引入到要使用该服务的模块当中，再去按照上面的方式使用该服务！]]></content>
       <tags>
-        <tag>随笔</tag>
+        <tag>AngularJs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[AngularJs02]]></title>
+    <url>%2F2016%2F07%2F08%2Fangular%2FAngularJs02%2F</url>
+    <content type="text"><![CDATA[作用域每一个控制器都拥有$scope，这个$scope可以看做是一个作用域，当前控制器中所有绑定的数据内容都会来这个$scope中进行查找 在模块控制的范围内，有一个全局作用域，$rootScope 控制器之间又可以进行嵌套，嵌套之后，作用域之间就形成了继承关系，其原理就是原型继承 继承关系指的就是，绑定数据在查找的时候，会现在当前控制器中进行查找，如果找到了就直接使用，如果找不到就会去外层控制的作用域中进行查找，直到找到$rootScope为止！ $rootScope可以被所有的控制器操作，所以很容易出现全局污染的情况，所以应该避免进行类似的操作 模块创建模块angular.module(“模块名称”, [“依赖项”]); 获取模块angular.module(“模块名称”); 模块注意事项angular推荐一个页面中只使用一个ng-app指定一个模块 如果存在多个ng-app指令，angular只会自动启动第一个模块！ 如果要启动多个模块，需要手动启动1angular.bootstrap(模块要控制的dom元素, ["模块名称"]); ** 模块不能嵌套！！！ MVC一种架构模式，将应用程序代码根据功能划分为三部分Model: 数据内容，负责所有的数据操作View: 视图内容, 负责所有的数据展示工作以及用户交互操作Controller: 控制器内容，负责处理所有的业务逻辑（在视图和数据之间搭建一个桥梁） MVP MVVM MVW MV*jqlitejqlite是angular内置的类似于jQuery的东西，但是他不具备jQuery大部分的功能，尤其是没有选择器，这个让人很难以接受！！ angular.element能够获取到jqlite的对象，也可以在引入jQuery之后，用来获取jQuery的$ angular不推荐进行dom操作，也不推荐使用别人家的东西！！！ $watch$watch可以用来监视数据的变化 只能监视$scope中的内容！123$scope.$watch("数据名称", function(newValue, oldValue)&#123; //这个函数会在数据发生变化的时候被调用&#125;) 如果要监视一个对象，那么需要传入第三个参数，deepwatch，是一个布尔值，设置为true的时候，会在对象内部的属性发生变化的时候也监视到变化，但是他默认值是false！！ controller的创建方式 推断式 12345模块对象.controller("控制器名称", function($scope)&#123; //$scope这个形参名是定死的，不能随便更改，更改之后会找到不到该内容，报错 //这种写法不推荐，因为在代码压缩的时候，$scope会被改变名称！&#125;) 依赖注入式 1模块对象.controller("控制器名称", ["$scope", "$log"..., function(scope, lgo...)&#123;&#125;]) 面向对象的方式 （可以将数据绑定到控制器的实例上） 12345模块对象.controller("控制器名称", function()&#123; //this指向的就是控制器的一个实例， //下面的操作就是将数据绑定到了实例对象上 this.数据 = "neirong";&#125;) 在视图中需要通过如下的方式进行使用12345&lt;!-- 这里的item其实就是控制器实例 --&gt;&lt;!-- 这句话就相当于执行了 var item = new 控制器() --&gt;&lt;div ng-controller="控制器名称 as item"&gt; &#123;&#123;item.数据&#125;&#125;&lt;/div&gt; 依赖注入DI dependence injection将需要使用的内容注入到指定的位置！ 优势： 1. 参数的顺序不需要指定了，参数也不需要将所有的内容都传递进来了 2. 参数名称也不需要定死了 angular当中的依赖注入的实现依赖注入的说明 ng-class可以用来绑定类样式 ng-class=”数据” 数据中存储的可以直接是类名 ng-class=”数据” 数据中存储的是一个对象，对象中的属性名表示类名，属性值表示该类名有没有在元素中出现，是一个布尔值！ng-class=”{red: true, green: false}” ng-repeat用来遍历数据，生成html12345&lt;p ng-repeat="item in list"&gt;&#123;&#123;item&#125;&#125;&lt;/p&gt;&lt;p ng-repeat="item in list"&gt;&#123;&#123;item&#125;&#125; &#123;&#123;$index&#125;&#125;&lt;/p&gt;&lt;p ng-repeat="(key, value) in list"&gt;&#123;&#123;key&#125;&#125; &#123;&#123;value&#125;&#125;&lt;/p&gt;ng-repeat不仅可以遍历数组，也可以遍历对象 ng-repeat遍历的数组中的内容是不允许重复的，如果想要重复的内容，需要加上track by 12&lt;p ng-repeat="item in list track by 一个唯一的值"&gt;&#123;&#123;item&#125;&#125;&lt;/p&gt;唯一的值一般使用的就是$index ng-cloak 解决闪烁问题原理：在angular加载完毕之后，所有ng-cloak相关的内容全都会被移除 声明ng-cloak的类样式，或者用属性选择器，加上display:none 在元素中使用class=”ng-cloak”，或者加上ng-cloak属性 将元素隐藏 在angular加载完毕之后，ng-cloak的类样式和ng-cloak属性都将被移除，元素显示！]]></content>
+      <tags>
+        <tag>AngularJs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[AngularJs01]]></title>
+    <url>%2F2016%2F07%2F06%2Fangular%2FAngularJs01%2F</url>
+    <content type="text"><![CDATA[AngularAngular是个框架功能：HTML代码在展示静态页面的功能上非常强大，但是如果涉及到动态数据展示，那么HTML代码就显得非常无力了。Angular这个框架，就是给HTML扩展了新的功能，让他可以支持动态数据展示！ 在html标签当中可以直接使用Angular的指令，将html元素和数据进行绑定。数据更新元素就会相应的更新 使用angular之后，几乎没有任何的DOM操作了 angular适用于CRUD项目，如果说项目中DOM特别复杂并且频繁，那么angular就不适用了！ angular一般被用来创建单页面应用！ SPASingle Page Application单页面应用 整个网站只有一个页面，类似于一个客户端！ 和多页面应用的区别： 单页面应用页面只会加载一次，之后的页面中内容的更改，都是通过ajax向后台发送数据请求，拿到数据之后，对页面内容进行更新 多页面应用，每次用户切换功能，都会将整个页面重新加载，跳转到新的页面 单页面应用的优点： 无刷新加载页面，用户体验好一些 请求数据会大大减少，提升页面加载的速度 实现多页面应用没法实现的功能， 音乐在不同页面之间的连续播放 缺点：不利于seo优化 单页面应用的实现原理通过判断当前页面的url地址中hash值的变化，来改变页面中的内容展示 onhashchange这个事件可以用来监听hash值的改变 location.hash这个属性可以用来获取当前页面url中的hash部分 可以在onhashchange事件当中通过location.hash获取到hash值，根据不同的hash值对页面内容进行相应更改。 Angular基本使用指令1. ng-app 设置模块控制的区域 2. ng-controller 设置控制器控制的区域 3. ng-model 一般用来将表单元素和数据进行双向绑定 4. ng-click 注册点击事件 5. {{}} 插值表达式 模块创建123456var app = angular.module("模块名称", []);//第二个参数的数组中放的是当前模块的依赖项//如果没有依赖项，那么也必须写一个空数组//获取已经创建好的模块var app = angular.module("模块名称") 创建控制器1234模块对象.controller("控制器名称", function($scope)&#123; //$scope当前控制器范围内的数据模型 //当前控制器要执行的功能代码&#125;) 步骤 引入angular.js 创建模块，创建控制器 指定模块以及控制器的作用范围 在范围内书写ng- 指令，进行元素和数据之间的绑定 $rootScope1234567891011//1. app.run(function($rootScope)&#123; //这个$rootScope就可以操作app控制区域内的数据模型&#125;)//2. app.controller("c1", function($scope, $rootScope)&#123; //$rootScope在所有的controller中都可以使用 //所以可能会造成全局污染 //所以一般不在controller中使用它！&#125;)]]></content>
+      <tags>
+        <tag>AngularJs</tag>
       </tags>
   </entry>
   <entry>
@@ -57,32 +67,40 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[js的数据类型]]></title>
-    <url>%2F2015%2F05%2F29%2Fjs%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%2F</url>
-    <content type="text"><![CDATA[基本类型123string var str = "abc";number var num = 1;boolean var flag = true; 复合类型 复杂类型12345678910Object var obj = new Object();function Array var arr = new Array();Date var now = new Date();RegExp var reg = new RegExp();Math String var str = new String();Number var num = new Number();Boolean var bl = new Boolean(); 空类型12nullundefined 如何获取数据类型typeof 数据 typeof关键字的返回值是字符串类型的一个字符串，表示数据的类型！typeof null 返回的是 object 但是不代表这个null是一个复杂类型的数据typoef undefined 返回的是 undefined 获取object后面的数据类型12345678910function getType(obj)&#123; return Object.prototype.toString.call(obj).slice(8, -1);&#125;var arr = [];var now = new Date();var reg = /\d/;console.log(getType(arr)); //Arrayconsole.log(getType(now)); //Dateconsole.log(getType(reg)); //RegExp]]></content>
-      <categories>
-        <category>js</category>
-        <category>面向对象day01</category>
-      </categories>
+    <title><![CDATA[error deployer not found:github 的错误]]></title>
+    <url>%2F2015%2F06%2F26%2Fhexo%2F%E6%90%AD%E5%BB%BA-hexo%EF%BC%8C%E5%9C%A8%E6%89%A7%E8%A1%8C-hexo-deploy-%E5%90%8E-%E5%87%BA%E7%8E%B0-error-deployer-not-found-github-%E7%9A%84%E9%94%99%E8%AF%AF%2F</url>
+    <content type="text"><![CDATA[当 hexo g -d 出现error deployer not found:github 的错误一、站点配置文件 _config.yml文件，deploy的type 的github需要改成git 二、pm install hexo-deployer-git –save 之后，然后再部署试试]]></content>
       <tags>
-        <tag>js</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo博客更换主题]]></title>
+    <url>%2F2015%2F06%2F25%2Fhexo%2Fhexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[第一步：选择主题主题从哪里找呢？官方就有提供了一些 主题，可以从中选择。官方提供的主题不少，可是并不一定有自己喜欢的或者又很难选择，这是个头疼的问题。之前我的博客主题就是随便选了一个还算看的过去的。但是再使用的过程中发现了一些问题： 不会自动生成目录不能自动获取摘要有很多配置不太方便 虽然有些问题，但并不影响整体使用，所以也没想去换主题了。前端时间逛知乎，发现这样一个问题：有哪些好看的 Hexo 主题？查看第一名的答案，有个主题排行，发现排第一名的主题 next。然后点开主题看了一下，发现主题简约，配置详细，能够解决我之前存在的问题，于是就决定选择这个主题了。 第二步：安装主题Hexo 有两份主要的配置文件（_config.yml），一份位于站点根目录下，另一份位于主题目录下。为了描述方便，在以下说明中，将前者称为 站点配置文件，后者称为 主题配置文件。 Hexo 安装主题的方式非常简单，只需要将主题文件放置于站点目录的 themes 目录下，然后修改下配置文件即可。具体到 NexT 来说，安装步骤如下。 下载 NexT 主题下载NexT主题稳定版： 前往 NexT 版本 发布页面 选择你所需要的版本，点击 Download ZIP 下载 Source Code (zip) 到本地。 或者 在 git bash 执行 git clone git@github.com:iissnan/hexo-theme-next.git 解压所下载的压缩包至站点的 themes 目录下，并将 解压后的文件夹名称更改为 next 启用NexT主题克隆/下载 完成后，打开 站点配置文件，找到 theme 字段，并将其值更改为 next。 验证主题是否启用运行 hexo s –debug，并访问 http://localhost:4000，确保站点正确运行。 第三步：配置选择 SchemeNexT 通过 Scheme 提供主题中的主题。 Mist 是 NexT 的第一款 Scheme。启用 Mist 仅需在 主题配置文件 中将 #scheme: Mist 前面的 # 注释去掉即可。 语言设置编辑 站点配置文件，将 language 设置成你所需要的语言。例如选用正体中文，则配置为： 1language: zh-Hans 可用的语言如以下表格所示： 语言 代码 设定值 English en language: en 简体中文 zh-Hans language: zh-Hans French fr-FR language: fr-FR 正体中文 zh-hk/zh-tw language: zh-hk Russian ru language: ru German de language: de 菜单设置菜单配置在 主题配置文件的 menu。 若你的站点运行在子目录中，请将链接前缀的 / 去掉。默认支持的菜单项有： 键值 设定值 commenthome home: / 主页archives archives: /archives 归档页categories categories: /categories 分类页（需手动创建）tags tags: /tags 标签页（需手动创建）about about: /about 关于页面 （需手动创建）commonweal commonweal: /404.html 公益 404 （需手动创建） 菜单示例配置：1234567menu: home: / archives: /archives #about: /about #categories: /categories tags: /tags #commonweal: /404.html 侧栏设置默认情况下，侧栏仅在文章页面（拥有目录列表）时才显示。可以通过修改 主题配置文件 中的 sidebar 字段来控制侧栏的行为。 支持的选项有： post - 默认行为，在文章页面（拥有目录列表）时显示 always - 在所有页面中都显示 hide - 在所有页面中都隐藏（可以手动展开） 侧栏示例配置： 1sidebar: post 头像设置编辑 站点配置文件，新增字段 avatar， 值设置成头像的链接地址。 其中，头像的链接地址可以是： 地址 值 完整的互联网 URL https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460 站点内的地址 /uploads/avatar.jpg - 需要将你的头像图片放置在 站点的 source/uploads/（可能需要新建uploads目录） /images/avatar.jpg - 需要将你的头像图片放置在 主题的 source/images/ 目录下 头像设置示例： avatar: https://avatars1.githubusercontent.com/u/32269?v=3&amp;s=460 作者名称编辑 站点配置文件，设置 author 为你的昵称。 站点描述设置编辑 站点配置文件，设置 description 字段为你的站点描述。站点描述可以是你喜欢的一句签名:) 总结到这里整个主题更换和配置就已经完成，现在可以看到博客已经成为预期的样子了。如果更换其它的主题，也大同小异，都是这三步，只是涉及到具体的配置就有些区别而已。 更多的配置可以参考下面的链接： NexT使用文档https://hexo.io/zh-cn/docs/configuration.html最后附上NexT下载地址：https://github.com/iissnan/hexo-theme-next]]></content>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[全等和等于的区别]]></title>
     <url>%2F2015%2F05%2F29%2F%E5%85%A8%E7%AD%89%E5%92%8C%E7%AD%89%E4%BA%8E%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
     <content type="text"><![CDATA[相等 == 只判断值是否相同 全等 === 先判断类型是否一致，然后再判断值是否相等 123var obj = &#123;&#125;;var obj1 = &#123;&#125;;obj == obj1; 对象类型的数据进行对比，是比较的存储地址 1234console.log(&#123;&#125; == &#123;&#125;); //falseconsole.log(1 === "1"); //falseconsole.log(NaN == NaN); //falseconsole.log(null === undefined); //false 当一个值类型的数据和引用类型的数据发生运算的时候 (+ - * / ==) 会遵守如下的规则： 1. 先调用这个引用类型数据的valueOf方法，获取返回值之后参与运算，如果能运算，那么直接得出结果 2. 如果不能运算, 继续调用该引用类型数据的toString方法，获取返回值参与运算，这个肯定是可以的出来结果的！1234567console.log([] == ![]);//console.log([] == false);//console.log([].valueOf() == false);//[].valueOf()返回值为数组本身，所以不能参与运算//console.log([].toString() == false);//console.log("" == false);//结果就是true 123456console.log(&#123;&#125; == !&#123;&#125;);//console.log(&#123;&#125; == false);//console.log(&#123;&#125;.valueOf() == false);//console.log(&#123;&#125;.toString() == false);//console.log("[object Object]" == false);//结果就是false 123456var obj = &#123; valueOf: function()&#123; return 123; &#125;&#125;;console.log(obj + 1); //124]]></content>
-      <categories>
-        <category>js</category>
-        <category>面向对象day01</category>
-      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[js的数据类型]]></title>
+    <url>%2F2015%2F05%2F29%2Fjs%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%2F</url>
+    <content type="text"><![CDATA[基本类型123string var str = "abc";number var num = 1;boolean var flag = true; 复合类型 复杂类型12345678910Object var obj = new Object();function Array var arr = new Array();Date var now = new Date();RegExp var reg = new RegExp();Math String var str = new String();Number var num = new Number();Boolean var bl = new Boolean(); 空类型12nullundefined 如何获取数据类型typeof 数据 typeof关键字的返回值是字符串类型的一个字符串，表示数据的类型！typeof null 返回的是 object 但是不代表这个null是一个复杂类型的数据typoef undefined 返回的是 undefined 获取object后面的数据类型12345678910function getType(obj)&#123; return Object.prototype.toString.call(obj).slice(8, -1);&#125;var arr = [];var now = new Date();var reg = /\d/;console.log(getType(arr)); //Arrayconsole.log(getType(now)); //Dateconsole.log(getType(reg)); //RegExp]]></content>
       <tags>
         <tag>js</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[bash命令介绍]]></title>
-    <url>%2F2015%2F05%2F25%2Fgit-bash%20%E5%AD%A6%E4%B9%A0%2F</url>
+    <url>%2F2015%2F05%2F15%2Fgit-bash%20%E5%AD%A6%E4%B9%A0%2F</url>
     <content type="text"><![CDATA[bash命令的基本格式说明（语法）命令的名称 [-选项] [参数] 命令的介绍切换目录的命令cd: change directory12cd Desktop// cd 要切换到的目录的路径 显示当前所在的目录pwd: print work directory 显示当前目录下的内容ls: list 选项： -a All显示所有内容选项： -l 以列表形式显示 -al 可以同时使用两个选项 当然也可以 分开写 ls -a -l drwxr-xr-x第一个d表示的就是当前是一个目录，如果第一个是- 就是一个文件后面的rwxr-xr-x分为三组来理解第一组的rwx r就是read，可读，w就是write，可写，x就是Execute，可执行，文件所有者的权限第二组的r-x 中间的-表示w权限没有 是文件所有者所在的用户组的权限第三组的r-x 是指其他的所有用户的权限 ls -选项 参数(你要显示哪个目录的内容就写那个目录的路径)参数如果不写，则默认显示当前的目录的内容 清空屏幕clear 创建文件touch1touch 文件名（或者文件路径） 删除文件rm 1rm 文件名（文件路径） 如果要通过rm命令删除文件夹，则需要添加一个选项 -r1rm -r 文件夹名称（文件夹路径） 选项 -f 可以强制删除一些文件 删除文件夹还可以通过 rmdir 命令，但是这个命令只可以删空文件夹 创建文件夹mkdir命令 mkdir 文件夹名称 或者文件夹路径 读取文件内容cat 一次性展示文件中所有的内容cat 文件名（文件路径） less 可以分页展示文件 按空格或者回车可以进行翻页 方向键也可以用来操作展示完毕之后可以通过q键退出 echo将指定的内容进行输出 默认输出到了屏幕上 输出重定向 ： 可以将输出内容重定向到指定的位置 覆盖操做echo 123 &gt; 1.txt : 追加操作 复制文件的操作cp cp 文件名 要复制成的文件名 移动文件的命令mv mv 文件名 目标位置 mv 可以用来做文件重命名的操作！]]></content>
       <tags>
         <tag>git bash</tag>
